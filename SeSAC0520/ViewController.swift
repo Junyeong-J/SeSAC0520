@@ -62,6 +62,21 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func imageViewTapped(_ sender: UITapGestureRecognizer) {
+        
+        print("____)_)_)_)_")
+        view.endEditing(true)
+        
+    }
+    
+    //1. did end on exit
+    //2. view.endEditing(true)
+    @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
+        
+        view.endEditing(true)//언제 어디든 사용 가능함
+        
+    }
+    
     
     //매개변수(parameter)
     //외부 매개변수(Argument Label) ex. thisIsTextColor
