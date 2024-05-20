@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var twoLabel: UILabel!
     @IBOutlet var threeLabel: UILabel!
     
-    
+    var count = [0, 0, 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +36,31 @@ class ViewController: UIViewController {
         
     }
 
+    
+    //1. 어떤 버튼을 클릭했는지 우찌 알까?
+    // -> currentTitle (옵셔널 조심, 버전 조심)
+    // -> tag
     @IBAction func oneButtonClicked(_ sender: UIButton) {
+
+        count[sender.tag] += 1
         
-        oneLabel.text = "4567"
+        oneLabel.text = "\(count[0])번 클릭"
+        twoLabel.text = "\(count[1])번 클릭"
+        threeLabel.text = "\(count[2])번 클릭"
         
+//        if sender.currentTitle == "클릭"{
+//            oneLabel.text = "\(oneCount)번"
+//            oneCount = oneCount + 1
+//        } else if sender.currentTitle == "버튼"{
+//            twoLabel.text = "\(twoCount)번"
+//            twoCount = twoCount + 1
+//        } else {
+//            threeLabel.text = "\(threeCount)번"
+//            threeCount = threeCount + 1
+//        }
     }
+    
+    
     
     //매개변수(parameter)
     //외부 매개변수(Argument Label) ex. thisIsTextColor
